@@ -464,7 +464,7 @@ class cartesian(_array):
         if isinstance(other,_array):
             return other+mol_array(self)
 
-######################### PSEUDO FRAGMENT ############################
+######################### CELL FRAGMENT ############################
 
 class cell_array(_array):
 

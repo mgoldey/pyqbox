@@ -63,13 +63,13 @@ def _readpybel(extension,filename):
             periodic=True
     except:
         periodic=False
-    cell_a=0.0
-    cell_b=0.0
-    cell_c=0.0
+    cvec=_np.zeros(9).reshape(3,3)
     if periodic:
-        cell_a=infile.unitcell.GetA()
-        cell_b=infile.unitcell.GetB()
-        cell_c=infile.unitcell.GetC()
+        cmat=infile.unitcell.GetCellMatrix()
+        for i in xrange(3):
+            cvec[i][0]=cmat.GetRow(i).GetX()
+            cvec[i][1]=cmat.GetRow(i).GetY()
+            cvec[i][2]=cmat.GetRow(i).GetZ()
 
     Natoms = len(infile.atoms)
     #atoms=_np.array([[dict_of_atomic_abbr[i.atomicnum]] for i in infile.atoms])    
@@ -84,7 +84,7 @@ def _readpybel(extension,filename):
     re_file.add(cartesian(atom_list=atom_list))    
 
     cell=cell_array()
-    cell.setABC=(cell_a,cell_b,cell_c)
+    cell.set_cell(cvec)
     re_file.add(cell)
 
     return deepcopy(re_file)
