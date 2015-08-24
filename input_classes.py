@@ -108,7 +108,7 @@ class multifile(object):
         f.close()
 
     def run(self,name='',qbox='',nt=1,np=1,timestamp=False):
-        '''Makes Q-Chem process the given batch inputfile object. Optional parameters are
+        '''Makes qbox process the given batch inputfile object. Optional parameters are
 
         name  ...... filename (without file extension, will be \".in\" and \".out\" by default)
         nt ......... number of threads
@@ -582,7 +582,7 @@ class command_array(_array):
     __tabstop = 30
         
     def __init__(self,command_init=""):
-        self.dict_of_keywords = {}
+        self.list_of_keywords = []
         command_init=command_init.splitlines()
     	if len(command_init)!=0:
     		for i in command_init:
@@ -595,21 +595,18 @@ class command_array(_array):
                 
     def add(self,keyword,value):
         '''\nFor values without documenation herein, please add keyword and value manually'''
-        self.dict_of_keywords[keyword.lower()]=value
-        
-    def remove(self,keyword):
-        del self.dict_of_keywords[keyword.lower()]
-        
+        self.list_of_keywords.append([keyword.lower(),value])
+               
     def clear(self):
         '''Removes all keywords from array.'''
-        self.dict_of_keywords.clear()
+        self.list_of_keywords=[]
         
     def __str__(self):
         ret_str=""
-        for key,value in self.dict_of_keywords.iteritems():
+        for key,value in self.list_of_keywords:
             ret_str += key.lower() + " " + value + "\n"
         return ret_str
     
     def info(self):
         print "Type: command array"
-        print "Keywords: " + str(len(self.dict_of_keywords))
+        print "Keywords: " + str(len(self.list_of_keywords))
