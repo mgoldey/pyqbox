@@ -137,8 +137,8 @@ def _readinput(file_input,silent=False):
                 carts.add_atom(k,loc=loc)
             elif i.startswith("#"):
                 continue #keeping comments is for the "future"
-            elif i.lower().startswith("set"):
-                command_array
+            #elif i.lower().startswith("set"):
+                #command_array
         re_file.add(cell)
         re_file.add(carts)
         re_file.add(pseudos)

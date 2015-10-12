@@ -81,7 +81,6 @@ class multifile(object):
         ''' Adds an inputfile to your batch object.'''
         if type(new_job) == type(inputfile()):
             self.list_of_jobs.append(new_job)
-            self.list_of_content.append(new_job._jtype)
         else:
             print "Can only add inputfiles."
 
@@ -161,6 +160,15 @@ class inputfile(object):
                 self.list_of_content.append("cell")
                 self.list_of_arrays.append(new_array)
 
+        elif type(new_array) == type(ref_cell_array()):
+            self.ref_cell = new_array
+            if "ref_cell" in self.list_of_content:
+                index = self.list_of_content.index("ref_cell")
+                self.list_of_arrays[index]=new_array
+            else:
+                self.list_of_content.append("ref_cell")
+                self.list_of_arrays.append(new_array)
+
         elif type(new_array) == type(cartesian()):
             self.cartesian = new_array
             if "cartesian" in self.list_of_content:
@@ -210,6 +218,12 @@ class inputfile(object):
             ret_str +=self.cell.__str__()+"\n"
         except:
             ret_str +="# No cell definition"+"\n"
+        
+        try: 
+            ret_str +=self.ref_cell.__str__()+"\n"
+        except:
+            ret_str +="# No ref_cell definition"+"\n"
+
         try: 
             ret_str +=self.cartesian.__str__()+"\n"
         except:
@@ -483,6 +497,17 @@ class cell_array(_array):
 
     def __str__(self):
         ret_str="set cell "
+        for i in self.cell:
+            for j in i:
+                ret_str+=str(j*1.8897543761)+' '
+        ret_str+="\n"
+        return ret_str
+
+
+class ref_cell_array(cell_array):
+   
+    def __str__(self):
+        ret_str="set ref_cell "
         for i in self.cell:
             for j in i:
                 ret_str+=str(j*1.8897543761)+' '
