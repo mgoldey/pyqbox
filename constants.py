@@ -48,7 +48,7 @@ def info():
 
 # Fundamentals in SI units                                     Value                 Uncertainty           Unit
 #---------------------------------------------------------------------------------------------------------------------------
-Angstrom                                        =           1.00001495e-10      #  0.000 000 90 e-10        m
+Angstrom                                        =           1.00000000e-10      #  (exact)                  m
 atomic_mass_constant                            =           1.660538921e-27     #  0.000 000 073 e-27       kg
 atomic_mass_constant_energy_equivalent          =           1.492417954e-10     #  0.000 000 066 e-10       J
 atomic_unit_of_1st_hyperpolarizability          =           3.206361449e-53     #  0.000 000 071 e-53       C^3 m^3 J^-2
