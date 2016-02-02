@@ -3,13 +3,13 @@
 # All rights reserved.
 
 # Redistribution and use in source and binary forms, with or without
-# modification, are permitted provided that the following conditions are met: 
+# modification, are permitted provided that the following conditions are met:
 
 # 1. Redistributions of source code must retain the above copyright notice, this
-#    list of conditions and the following disclaimer. 
+#    list of conditions and the following disclaimer.
 # 2. Redistributions in binary form must reproduce the above copyright notice,
 #    this list of conditions and the following disclaimer in the documentation
-#    and/or other materials provided with the distribution. 
+#    and/or other materials provided with the distribution.
 
 # THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
 # ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
@@ -23,7 +23,7 @@
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 # The views and conclusions contained in the software and documentation are those
-# of the authors and should not be interpreted as representing official policies, 
+# of the authors and should not be interpreted as representing official policies,
 # either expressed or implied, of the FreeBSD Project.
 
 #####################################################################
@@ -86,8 +86,8 @@ class multifile(object):
 
     def remove(self,position=0): #if not specified delete last
         ''' Removes an inputfile from your batch object. If no other specified the last is removed.'''
-        del self.list_of_content[position] 
-        del self.list_of_jobs[position] 
+        del self.list_of_content[position]
+        del self.list_of_jobs[position]
 
     def __str__(self):
         if self.list_of_jobs==[]:
@@ -122,7 +122,7 @@ class multifile(object):
 ########################### INPUTFILE  ##############################
 
 class inputfile(object):
-    
+
     def __init__(self, arrays=[]):
         self.list_of_arrays=[]
         self.list_of_content=[]
@@ -130,7 +130,7 @@ class inputfile(object):
         self.__jtype="undef"
         for k in arrays:
             self.add(k)
-            
+
     def add(self,new_array):
         ''' Adds an array to your inputfile object.'''
         if type(new_array) == type(variable_array()):
@@ -140,8 +140,8 @@ class inputfile(object):
                 self.list_of_arrays[index]=new_array
             else: #change this to allow sets of commands and variables
                 self.list_of_content.append("variables")
-                self.list_of_arrays.append(new_array)            
-        
+                self.list_of_arrays.append(new_array)
+
         elif type(new_array) == type(command_array()):
             self.commands = new_array
             if "commands" in self.list_of_content:
@@ -150,7 +150,7 @@ class inputfile(object):
             else:
                 self.list_of_content.append("commands")
                 self.list_of_arrays.append(new_array)
-        
+
         elif type(new_array) == type(cell_array()):
             self.cell = new_array
             if "cell" in self.list_of_content:
@@ -201,12 +201,12 @@ class inputfile(object):
 
     def remove(self,position=0): #if not specified delete last
         ''' Removes an array from your inputfile object. If no other specified the last is removed.'''
-        del self.list_of_content[position] 
-        del self.list_of_arrays[position] 
-             
+        del self.list_of_content[position]
+        del self.list_of_arrays[position]
+
     def __str__(self):
         ret_str = ""
-        try: 
+        try:
             ret_str +=self.pseudo.__str__()+"\n"
         except:
             ret_str +="# No pseudo definitions"+"\n"
@@ -214,33 +214,33 @@ class inputfile(object):
             ret_str +=self.comments.__str__()+"\n"
         except:
             ret_str +="# No comment" +"\n"
-        try: 
+        try:
             ret_str +=self.cell.__str__()+"\n"
         except:
             ret_str +="# No cell definition"+"\n"
-        
-        try: 
+
+        try:
             ret_str +=self.ref_cell.__str__()+"\n"
         except:
             ret_str +="# No ref_cell definition"+"\n"
 
-        try: 
+        try:
             ret_str +=self.cartesian.__str__()+"\n"
         except:
             ret_str +="# No cartesian definition"+"\n"
-        try: 
+        try:
             ret_str +=self.variables.__str__()+"\n"
         except:
             ret_str +="# No variable definitions"+"\n"
-        try: 
+        try:
             ret_str +=self.commands.__str__()+"\n"
         except:
             ret_str +="# No commands"+"\n"
 
         #        for k in self.list_of_arrays:
-        #            ret_str += k.__str__() + "\n" 
+        #            ret_str += k.__str__() + "\n"
         return ret_str
- 
+
     def write(self,filename):
         f = open(filename,'w')
         str_ret = self.__str__()
@@ -269,20 +269,20 @@ class inputfile(object):
 
         running_scripts._run(self,name,qbox,nt,np,timestamp)
 
-    def __add__(self,other): 
+    def __add__(self,other):
         #autoadd subarrays - works
         import copy
         new=copy.deepcopy(self)
         new.add(other)
         return new
 
-#    def __radd__(self,other): 
+#    def __radd__(self,other):
 #	#not working right, but general form should be this
 #	import copy
 #	new=copy.deepcopy(self)
 #	new.add(other)
 #	return new
-    
+
 ######################## INPUT FRAGMENTS ############################
 
 class _array(object):
@@ -293,7 +293,7 @@ class _array(object):
     def __str__(self):
         ret_str += str(self.content) + "\n"
         return ret_str
-    
+
     def write(self,filename):
         f = open(filename,'w')
         str_ret = self.__str__()
@@ -325,7 +325,7 @@ class _unsupported_array(_array):
 
     def add_line(self,line):
         self.content.append(line.strip())
-    
+
     def __str__(self):
         for k in self.content:
             ret_str += k + "\n"
@@ -366,14 +366,14 @@ class cartesian(_array):
             self.xyzs.append(_np.array([float(x),float(y),float(z)]))
         self.xyzs=_np.array(self.xyzs)
         self.__center_of_mass()
-        
+
     def __center_of_mass(self):
         """This computes the centroid and center of mass using standard atomic masses"""
         #print self.xyzs, self.__Natoms
         self.com=_np.array([0.0,0.0,0.0])
         self.centroid=_np.array([0.0,0.0,0.0])
         if len(self.xyzs)==0:
-            return   
+            return
         total_mass=0.0
         self.centroid=sum(self.xyzs)/len(self.xyzs)
         wts=[constants.dict_of_atomic_masses[self.list_of_atoms[i][0].replace("@","")]  for i in xrange(self.__Natoms)]
@@ -383,13 +383,13 @@ class cartesian(_array):
             self.com=self.com+atom*wt
         self.centroid=_np.array([i/self.__Natoms for i in self.centroid])
         self.com=_np.array([i/total_mass for i in self.com])
-    
+
     def title(self,title="show"):
         if title == "show":
             return self.__title
         else:
             self.__title=title
-        
+
     def add_atom(self,name="H",x="0",y="0",z="0",loc=[]):
         if len(loc)!=0:
             loc=[ str(i) for i in loc]
@@ -398,12 +398,12 @@ class cartesian(_array):
             self.list_of_atoms.append([name,x,y,z])
         self.fix()
         self.__center_of_mass()
-    
+
     def remove_atom(self,position=0):
         del self.list_of_atoms[position]  # First atom is atom 1
         self.fix()
         self.__center_of_mass()
-    
+
     def atoms(self):
         for i, k in enumerate(self.list_of_atoms):
             print  k[0] + "\t" + str(k[1]) + "\t" + str(k[2]) + "\t" + str(k[3])
@@ -416,10 +416,10 @@ class cartesian(_array):
 
     def print_centroid(self):
         print str(self.centroid[0])+'\t'+str(self.centroid[1])+'\t'+str(self.centroid[2])
-        
+
     def print_center_of_mass(self):
         print str(self.com[0])+'\t'+str(self.com[1])+'\t'+str(self.com[2])
-        
+
     def move(self,dir,amt=1.0):
         dir=_np.array(dir)
         for i in xrange(self.__Natoms):
@@ -445,7 +445,7 @@ class cartesian(_array):
         kinds.sort()
         counts=[names.count(i) for i in kinds]
         counters=_np.zeros(len(kinds),dtype=_np.int)
-        
+
         for k in atoms:
             myctr=counters[kinds.index(k[0])]
             str_ret += "atom " + k[0] + str(myctr+1) + " " + constants.dict_abbr_to_name[k[0]].lower() + "   " + str(float(k[1])*1.8897543761) + "    " + str(float(k[2])*1.8897543761) + "    " + str(float(k[3])*1.8897543761) + "\n"
@@ -464,7 +464,7 @@ class cartesian(_array):
         if type(other)==type(self.com):  #let's move the atoms using a numpy array
             self.move(other,1.0)
         if type(other)==type(self):                      #merge two cartesians
-            atoms=self.list_of_atoms+other.list_of_atoms  
+            atoms=self.list_of_atoms+other.list_of_atoms
             return cartesian(atom_list=atoms)
         if isinstance(other,_array):
             return other+mol_array(self)
@@ -484,7 +484,7 @@ class cell_array(_array):
 
     def __init__(self):
         self.cell=_np.array(_np.zeros(9).reshape((3,3)))
-    
+
     def setABC(self,A,B,C):
         self.cell[0][0]=A
         self.cell[1][1]=B
@@ -505,7 +505,7 @@ class cell_array(_array):
 
 
 class ref_cell_array(cell_array):
-   
+
     def __str__(self):
         ret_str="set ref_cell "
         for i in self.cell:
@@ -520,7 +520,7 @@ class pseudo_array(_array):
 
     def __init__(self):
         self.dict_of_atoms = {}
-    
+
     def add(self,atom,line):
         if constants.dict_abbr_to_name.has_key(atom):
             atom=constants.dict_abbr_to_name[atom]
@@ -558,13 +558,13 @@ class comment_array(_array):
         ret_str=""
         lines = filter(bool,self.content.split("\n")) #remove empty list entries
         for line in lines:
-            ret_str += "#   " + line.strip() + "\n" 
+            ret_str += "#   " + line.strip() + "\n"
         return ret_str
 
 ######################### VARIABLE FRAGMENT ##############################
 
 class variable_array(_array):
-    
+
     __tabstop = 30
     def __init__(self,variable_init=""):
         self.dict_of_keywords = {}
@@ -580,20 +580,20 @@ class variable_array(_array):
     def add(self,keyword,value):
         '''\nFor values without documenation herein, please add keyword and value manually'''
         self.dict_of_keywords[keyword.lower()]=value.upper()
-        
+
     def remove(self,keyword):
         del self.dict_of_keywords[keyword.upper()]
-        
+
     def clear(self):
         '''Removes all keywords from array.'''
         self.dict_of_keywords.clear()
-        
+
     def __str__(self):
         ret_str=""
         for key,value in self.dict_of_keywords.iteritems():
             ret_str += "set " +key.lower() + " " + value + "\n"
         return ret_str
-    
+
     def info(self):
         print "Type: variable array"
         print "Keywords: " + str(len(self.dict_of_keywords))
@@ -603,9 +603,9 @@ class variable_array(_array):
 ######################### COMMAND FRAGMENT ##############################
 
 class command_array(_array):
-    
+
     __tabstop = 30
-        
+
     def __init__(self,command_init=""):
         self.list_of_keywords = []
         command_init=command_init.splitlines()
@@ -617,21 +617,21 @@ class command_array(_array):
     			if j[0].startswith("$"):
     				continue
     			self.add(j[0],i.replace(j[0],""))
-                
+
     def add(self,keyword,value):
         '''\nFor values without documenation herein, please add keyword and value manually'''
         self.list_of_keywords.append([keyword.lower(),value])
-               
+
     def clear(self):
         '''Removes all keywords from array.'''
         self.list_of_keywords=[]
-        
+
     def __str__(self):
         ret_str=""
         for key,value in self.list_of_keywords:
             ret_str += key.lower() + " " + value + "\n"
         return ret_str
-    
+
     def info(self):
         print "Type: command array"
         print "Keywords: " + str(len(self.list_of_keywords))
