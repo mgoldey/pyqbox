@@ -448,7 +448,7 @@ class cartesian(_array):
 
         for k in atoms:
             myctr=counters[kinds.index(k[0])]
-            str_ret += "atom " + k[0] + str(myctr+1) + " " + constants.dict_abbr_to_name[k[0]].lower() + "   " + str(float(k[1])*1.8897543761) + "    " + str(float(k[2])*1.8897543761) + "    " + str(float(k[3])*1.8897543761) + "\n"
+            str_ret += "atom " + k[0] + str(myctr+1) + " " + constants.dict_abbr_to_name[k[0]].lower() + "   " + str(float(k[1])*constants.angstrom_to_bohr) + "    " + str(float(k[2])*constants.angstrom_to_bohr) + "    " + str(float(k[3])*constants.angstrom_to_bohr) + "\n"
             counters[kinds.index(k[0])]+=1
         return str_ret
 
@@ -499,7 +499,7 @@ class cell_array(_array):
         ret_str="set cell "
         for i in self.cell:
             for j in i:
-                ret_str+=str(j*1.8897543761)+' '
+                ret_str+=str(j*constants.angstrom_to_bohr)+' '
         ret_str+="\n"
         return ret_str
 
@@ -510,7 +510,7 @@ class ref_cell_array(cell_array):
         ret_str="set ref_cell "
         for i in self.cell:
             for j in i:
-                ret_str+=str(j*1.8897543761)+' '
+                ret_str+=str(j*constants.angstrom_to_bohr)+' '
         ret_str+="\n"
         return ret_str
 

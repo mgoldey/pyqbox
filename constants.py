@@ -164,8 +164,8 @@ kilogram_to_kelvin             =         6.5096582e39        #  0.000 0059 e39  
 
 # Conversions added to NIST selection
 #---------------------------------------------------------------------------
-bohr_to_angstrom                =         0.5291692998
-angstrom_to_bohr                =         1.8897543761
+bohr_to_angstrom                =         0.52917721092
+angstrom_to_bohr                =         1.889726125
 
 joule_to_cal                    =         0.2390057361
 cal_to_joule                    =         4.184
