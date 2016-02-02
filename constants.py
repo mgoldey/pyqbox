@@ -3,13 +3,13 @@
 # All rights reserved.
 
 # Redistribution and use in source and binary forms, with or without
-# modification, are permitted provided that the following conditions are met: 
+# modification, are permitted provided that the following conditions are met:
 
 # 1. Redistributions of source code must retain the above copyright notice, this
-#    list of conditions and the following disclaimer. 
+#    list of conditions and the following disclaimer.
 # 2. Redistributions in binary form must reproduce the above copyright notice,
 #    this list of conditions and the following disclaimer in the documentation
-#    and/or other materials provided with the distribution. 
+#    and/or other materials provided with the distribution.
 
 # THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
 # ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
@@ -23,7 +23,7 @@
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 # The views and conclusions contained in the software and documentation are those
-# of the authors and should not be interpreted as representing official policies, 
+# of the authors and should not be interpreted as representing official policies,
 # either expressed or implied, of the FreeBSD Project.
 
 #####################################################################
@@ -81,12 +81,12 @@ classical_electron_radius                       =           2.8179403267e-15    
 Compton_wavelength                              =           2.4263102389e-12    #  0.000 000 0016 e-12      m
 electric_constant                               =           8.854187817e-12     #  (exact)                  F m^-1
 electron_charge_to_mass_quotient                =           -1.758820088e11     #  0.000 000 039 e11        C kg^-1
-electron_g_factor                               =           -2.00231930436153   #  0.000 000 000 000 53     
+electron_g_factor                               =           -2.00231930436153   #  0.000 000 000 000 53
 electron_mass                                   =           9.10938291e-31      #  0.000 000 40 e-31        kg
 electron_volt                                   =           1.602176565e-19     #  0.000 000 035 e-19       J
 elementary_charge                               =           1.602176565e-19     #  0.000 000 035 e-19       C
 Fermi_coupling_constant                         =           1.166364e-5         #  0.000 005 e-5            GeV^-2
-fine_structure_constant                         =           7.2973525698e-3     #  0.000 000 0024 e-3       
+fine_structure_constant                         =           7.2973525698e-3     #  0.000 000 0024 e-3
 lattice_parameter_of_silicon                    =           543.1020504e-12     #  0.000 0089 e-12          m
 Loschmidt_constant_1_bar                        =           2.6516462e25        #  0.000 0024 e25           m^-3
 Loschmidt_constant_1_atm                        =           2.6867805e25        #  0.000 0024 e25           m^-3
@@ -166,41 +166,41 @@ kilogram_to_kelvin             =         6.5096582e39        #  0.000 0059 e39  
 #---------------------------------------------------------------------------
 bohr_to_angstrom                =         0.5291692998
 angstrom_to_bohr                =         1.8897543761
- 
-joule_to_cal                    =         0.2390057361 
+
+joule_to_cal                    =         0.2390057361
 cal_to_joule                    =         4.184
-joule_to_kcal                   =         0.2390057361e-3 
-kcal_to_joule                   =         4184 
- 
-inverse_cm_to_hartree           =         1/2.194746313708e5 
-inverse_cm_to_hertz             =         1/3.335640951e-11  
-inverse_cm_to_joule             =         1/5.03411701e22    
-inverse_cm_to_kelvin            =         1/0.69503476       
-inverse_cm_to_kilogram          =         1/4.52443873e39    
-inverse_cm_to_eV                =         1/8.06554429e3      
- 
- 
+joule_to_kcal                   =         0.2390057361e-3
+kcal_to_joule                   =         4184
+
+inverse_cm_to_hartree           =         1/2.194746313708e5
+inverse_cm_to_hertz             =         1/3.335640951e-11
+inverse_cm_to_joule             =         1/5.03411701e22
+inverse_cm_to_kelvin            =         1/0.69503476
+inverse_cm_to_kilogram          =         1/4.52443873e39
+inverse_cm_to_eV                =         1/8.06554429e3
+
+
 hartree_to_kcal_pro_mole        =         hartree_to_joule*joule_to_kcal*Avogadro_constant
 hartree_to_kJ_pro_mole          =         hartree_to_joule*Avogadro_constant/1000
 kcal_pro_mole_to_hartree        =         1/hartree_to_kcal_pro_mole
 kJ_pro_mole_to_hartree          =         1/hartree_to_kJ_pro_mole
- 
- 
+
+
 kelvin_to_kcal_pro_mole         =         kelvin_to_joule*joule_to_kcal*Avogadro_constant
 kelvin_to_kJ_pro_mole           =         kelvin_to_joule*Avogadro_constant/1000
 kcal_pro_mole_to_kelvin         =         1/kelvin_to_kcal_pro_mole
 kJ_pro_mole_to_kelvin           =         1/kelvin_to_kJ_pro_mole
- 
+
 hertz_to_kcal_pro_mole          =         hertz_to_joule*joule_to_kcal*Avogadro_constant
 hertz_to_kJ_pro_mole            =         hertz_to_joule*Avogadro_constant/1000
 kcal_pro_mole_to_hertz          =         1/hertz_to_kcal_pro_mole
 kJ_pro_mole_to_hertz            =         1/hertz_to_kJ_pro_mole
- 
+
 inverse_cm_to_kcal_pro_mole     =         inverse_cm_to_joule*joule_to_kcal*Avogadro_constant
 inverse_cm_to_kJ_pro_mole       =         inverse_cm_to_joule*Avogadro_constant/1000
 kcal_pro_mole_to_inverse_cm     =         1/inverse_cm_to_kcal_pro_mole
 kJ_pro_mole_to_inverse_cm       =         1/inverse_cm_to_kJ_pro_mole
- 
+
 atomic_unit_of_time_to_picosec  =        1e-12/atomic_unit_of_time
 atomic_unit_of_time_to_femtosec =        1e-15/atomic_unit_of_time
 atomic_unit_of_time_to_attosec  =        1e-18/atomic_unit_of_time
@@ -220,7 +220,7 @@ attosec_to_picosec              =        1e-6
 
 # Relative atomic mass per most common isotope
 #---------------------------------------------
-# Using http://www.nist.gov/pml/data/comp.cfm 
+# Using http://www.nist.gov/pml/data/comp.cfm
 
 dict_of_atomic_masses = {}
 
@@ -565,105 +565,105 @@ dict_of_atomic_abbr[117] =  "Uus"
 dict_of_atomic_abbr[118] =  "Uuo"
 
 dict_of_atomic_numbers= {}
-dict_of_atomic_numbers["H"] = 1 
-dict_of_atomic_numbers["He"] = 2 
-dict_of_atomic_numbers["Li"] = 3 
-dict_of_atomic_numbers["Be"] = 4 
-dict_of_atomic_numbers["B"] = 5 
-dict_of_atomic_numbers["C"] = 6 
-dict_of_atomic_numbers["N"] = 7 
-dict_of_atomic_numbers["O"] = 8 
-dict_of_atomic_numbers["F"] = 9 
-dict_of_atomic_numbers["Ne"] = 10 
-dict_of_atomic_numbers["Na"] = 11 
-dict_of_atomic_numbers["Mg"] = 12 
-dict_of_atomic_numbers["Al"] = 13 
-dict_of_atomic_numbers["Si"] = 14 
-dict_of_atomic_numbers["P"] = 15 
-dict_of_atomic_numbers["S"] = 16 
-dict_of_atomic_numbers["Cl"] = 17 
-dict_of_atomic_numbers["Ar"] = 18 
-dict_of_atomic_numbers["K"] = 19 
-dict_of_atomic_numbers["Ca"] = 20 
-dict_of_atomic_numbers["Sc"] = 21 
-dict_of_atomic_numbers["Ti"] = 22 
-dict_of_atomic_numbers["V"] = 23 
-dict_of_atomic_numbers["Cr"] = 24 
-dict_of_atomic_numbers["Mn"] = 25 
-dict_of_atomic_numbers["Fe"] = 26 
-dict_of_atomic_numbers["Co"] = 27 
-dict_of_atomic_numbers["Ni"] = 28 
-dict_of_atomic_numbers["Cu"] = 29 
-dict_of_atomic_numbers["Zn"] = 30 
-dict_of_atomic_numbers["Ga"] = 31 
-dict_of_atomic_numbers["Ge"] = 32 
-dict_of_atomic_numbers["As"] = 33 
-dict_of_atomic_numbers["Se"] = 34 
-dict_of_atomic_numbers["Br"] = 35 
-dict_of_atomic_numbers["Kr"] = 36 
-dict_of_atomic_numbers["Rb"] = 37 
-dict_of_atomic_numbers["Sr"] = 38 
-dict_of_atomic_numbers["Y"] = 39 
-dict_of_atomic_numbers["Zr"] = 40 
-dict_of_atomic_numbers["Nb"] = 41 
-dict_of_atomic_numbers["Mo"] = 42 
-dict_of_atomic_numbers["Tc"] = 43 
-dict_of_atomic_numbers["Ru"] = 44 
-dict_of_atomic_numbers["Rh"] = 45 
-dict_of_atomic_numbers["Pd"] = 46 
-dict_of_atomic_numbers["Ag"] = 47 
-dict_of_atomic_numbers["Cd"] = 48 
-dict_of_atomic_numbers["In"] = 49 
-dict_of_atomic_numbers["Sn"] = 50 
-dict_of_atomic_numbers["Sb"] = 51 
-dict_of_atomic_numbers["Te"] = 52 
-dict_of_atomic_numbers["I"] = 53 
-dict_of_atomic_numbers["Xe"] = 54 
-dict_of_atomic_numbers["Cs"] = 55 
-dict_of_atomic_numbers["Ba"] = 56 
-dict_of_atomic_numbers["La"] = 57 
-dict_of_atomic_numbers["Ce"] = 58 
-dict_of_atomic_numbers["Pr"] = 59 
-dict_of_atomic_numbers["Nd"] = 60 
-dict_of_atomic_numbers["Pm"] = 61 
-dict_of_atomic_numbers["Sm"] = 62 
-dict_of_atomic_numbers["Eu"] = 63 
-dict_of_atomic_numbers["Gd"] = 64 
-dict_of_atomic_numbers["Tb"] = 65 
-dict_of_atomic_numbers["Dy"] = 66 
-dict_of_atomic_numbers["Ho"] = 67 
-dict_of_atomic_numbers["Er"] = 68 
-dict_of_atomic_numbers["Tm"] = 69 
-dict_of_atomic_numbers["Yb"] = 70 
-dict_of_atomic_numbers["Lu"] = 71 
-dict_of_atomic_numbers["Hf"] = 72 
-dict_of_atomic_numbers["Ta"] = 73 
-dict_of_atomic_numbers["W"] = 74 
-dict_of_atomic_numbers["Re"] = 75 
-dict_of_atomic_numbers["Os"] = 76 
-dict_of_atomic_numbers["Ir"] = 77 
-dict_of_atomic_numbers["Pt"] = 78 
-dict_of_atomic_numbers["Au"] = 79 
-dict_of_atomic_numbers["Hg"] = 80 
-dict_of_atomic_numbers["Tl"] = 81 
-dict_of_atomic_numbers["Pb"] = 82 
-dict_of_atomic_numbers["Bi"] = 83 
-dict_of_atomic_numbers["Po"] = 84 
-dict_of_atomic_numbers["At"] = 85 
-dict_of_atomic_numbers["Rn"] = 86 
-dict_of_atomic_numbers["Fr"] = 87 
-dict_of_atomic_numbers["Ra"] = 88 
-dict_of_atomic_numbers["Ac"] = 89 
-dict_of_atomic_numbers["Th"] = 90 
-dict_of_atomic_numbers["Pa"] = 91 
-dict_of_atomic_numbers["U"] = 92 
-dict_of_atomic_numbers["Np"] = 93 
-dict_of_atomic_numbers["Pu"] = 94 
-dict_of_atomic_numbers["Am"] = 95 
-dict_of_atomic_numbers["Cm"] = 96 
-dict_of_atomic_numbers["Bk"] = 97 
-dict_of_atomic_numbers["Cf"] = 98 
-dict_of_atomic_numbers["Es"] = 99 
+dict_of_atomic_numbers["H"] = 1
+dict_of_atomic_numbers["He"] = 2
+dict_of_atomic_numbers["Li"] = 3
+dict_of_atomic_numbers["Be"] = 4
+dict_of_atomic_numbers["B"] = 5
+dict_of_atomic_numbers["C"] = 6
+dict_of_atomic_numbers["N"] = 7
+dict_of_atomic_numbers["O"] = 8
+dict_of_atomic_numbers["F"] = 9
+dict_of_atomic_numbers["Ne"] = 10
+dict_of_atomic_numbers["Na"] = 11
+dict_of_atomic_numbers["Mg"] = 12
+dict_of_atomic_numbers["Al"] = 13
+dict_of_atomic_numbers["Si"] = 14
+dict_of_atomic_numbers["P"] = 15
+dict_of_atomic_numbers["S"] = 16
+dict_of_atomic_numbers["Cl"] = 17
+dict_of_atomic_numbers["Ar"] = 18
+dict_of_atomic_numbers["K"] = 19
+dict_of_atomic_numbers["Ca"] = 20
+dict_of_atomic_numbers["Sc"] = 21
+dict_of_atomic_numbers["Ti"] = 22
+dict_of_atomic_numbers["V"] = 23
+dict_of_atomic_numbers["Cr"] = 24
+dict_of_atomic_numbers["Mn"] = 25
+dict_of_atomic_numbers["Fe"] = 26
+dict_of_atomic_numbers["Co"] = 27
+dict_of_atomic_numbers["Ni"] = 28
+dict_of_atomic_numbers["Cu"] = 29
+dict_of_atomic_numbers["Zn"] = 30
+dict_of_atomic_numbers["Ga"] = 31
+dict_of_atomic_numbers["Ge"] = 32
+dict_of_atomic_numbers["As"] = 33
+dict_of_atomic_numbers["Se"] = 34
+dict_of_atomic_numbers["Br"] = 35
+dict_of_atomic_numbers["Kr"] = 36
+dict_of_atomic_numbers["Rb"] = 37
+dict_of_atomic_numbers["Sr"] = 38
+dict_of_atomic_numbers["Y"] = 39
+dict_of_atomic_numbers["Zr"] = 40
+dict_of_atomic_numbers["Nb"] = 41
+dict_of_atomic_numbers["Mo"] = 42
+dict_of_atomic_numbers["Tc"] = 43
+dict_of_atomic_numbers["Ru"] = 44
+dict_of_atomic_numbers["Rh"] = 45
+dict_of_atomic_numbers["Pd"] = 46
+dict_of_atomic_numbers["Ag"] = 47
+dict_of_atomic_numbers["Cd"] = 48
+dict_of_atomic_numbers["In"] = 49
+dict_of_atomic_numbers["Sn"] = 50
+dict_of_atomic_numbers["Sb"] = 51
+dict_of_atomic_numbers["Te"] = 52
+dict_of_atomic_numbers["I"] = 53
+dict_of_atomic_numbers["Xe"] = 54
+dict_of_atomic_numbers["Cs"] = 55
+dict_of_atomic_numbers["Ba"] = 56
+dict_of_atomic_numbers["La"] = 57
+dict_of_atomic_numbers["Ce"] = 58
+dict_of_atomic_numbers["Pr"] = 59
+dict_of_atomic_numbers["Nd"] = 60
+dict_of_atomic_numbers["Pm"] = 61
+dict_of_atomic_numbers["Sm"] = 62
+dict_of_atomic_numbers["Eu"] = 63
+dict_of_atomic_numbers["Gd"] = 64
+dict_of_atomic_numbers["Tb"] = 65
+dict_of_atomic_numbers["Dy"] = 66
+dict_of_atomic_numbers["Ho"] = 67
+dict_of_atomic_numbers["Er"] = 68
+dict_of_atomic_numbers["Tm"] = 69
+dict_of_atomic_numbers["Yb"] = 70
+dict_of_atomic_numbers["Lu"] = 71
+dict_of_atomic_numbers["Hf"] = 72
+dict_of_atomic_numbers["Ta"] = 73
+dict_of_atomic_numbers["W"] = 74
+dict_of_atomic_numbers["Re"] = 75
+dict_of_atomic_numbers["Os"] = 76
+dict_of_atomic_numbers["Ir"] = 77
+dict_of_atomic_numbers["Pt"] = 78
+dict_of_atomic_numbers["Au"] = 79
+dict_of_atomic_numbers["Hg"] = 80
+dict_of_atomic_numbers["Tl"] = 81
+dict_of_atomic_numbers["Pb"] = 82
+dict_of_atomic_numbers["Bi"] = 83
+dict_of_atomic_numbers["Po"] = 84
+dict_of_atomic_numbers["At"] = 85
+dict_of_atomic_numbers["Rn"] = 86
+dict_of_atomic_numbers["Fr"] = 87
+dict_of_atomic_numbers["Ra"] = 88
+dict_of_atomic_numbers["Ac"] = 89
+dict_of_atomic_numbers["Th"] = 90
+dict_of_atomic_numbers["Pa"] = 91
+dict_of_atomic_numbers["U"] = 92
+dict_of_atomic_numbers["Np"] = 93
+dict_of_atomic_numbers["Pu"] = 94
+dict_of_atomic_numbers["Am"] = 95
+dict_of_atomic_numbers["Cm"] = 96
+dict_of_atomic_numbers["Bk"] = 97
+dict_of_atomic_numbers["Cf"] = 98
+dict_of_atomic_numbers["Es"] = 99
 dict_of_atomic_numbers["Fm"] = 100
 dict_of_atomic_numbers["Md"] = 101
 dict_of_atomic_numbers["No"] = 102
@@ -686,123 +686,123 @@ dict_of_atomic_numbers["Uuo"] = 118
 
 
 dict_of_atomic_names = {}
-dict_of_atomic_names[1] = "Hydrogen" 
-dict_of_atomic_names[2] = "Helium" 
-dict_of_atomic_names[3] = "Lithium" 
-dict_of_atomic_names[4] = "Beryllium" 
-dict_of_atomic_names[5] = "Boron" 
-dict_of_atomic_names[6] = "Carbon" 
-dict_of_atomic_names[7] = "Nitrogen" 
-dict_of_atomic_names[8] = "Oxygen" 
-dict_of_atomic_names[9] = "Fluorine" 
-dict_of_atomic_names[10] = "Neon" 
-dict_of_atomic_names[11] = "Sodium" 
-dict_of_atomic_names[12] = "Magnesium" 
-dict_of_atomic_names[13] = "Aluminum" 
-dict_of_atomic_names[14] = "Silicon" 
-dict_of_atomic_names[15] = "Phosphorus" 
-dict_of_atomic_names[16] = "Sulfur" 
-dict_of_atomic_names[17] = "Chlorine" 
-dict_of_atomic_names[18] = "Argon" 
-dict_of_atomic_names[19] = "Potassium" 
-dict_of_atomic_names[20] = "Calcium" 
-dict_of_atomic_names[21] = "Scandium" 
-dict_of_atomic_names[22] = "Titanium" 
-dict_of_atomic_names[23] = "Vanadium" 
-dict_of_atomic_names[24] = "Chromium" 
-dict_of_atomic_names[25] = "Manganese" 
-dict_of_atomic_names[26] = "Iron" 
-dict_of_atomic_names[27] = "Cobalt" 
-dict_of_atomic_names[28] = "Nickel" 
-dict_of_atomic_names[29] = "Copper" 
-dict_of_atomic_names[30] = "Zinc" 
-dict_of_atomic_names[31] = "Gallium" 
-dict_of_atomic_names[32] = "Germanium" 
-dict_of_atomic_names[33] = "Arsenic" 
-dict_of_atomic_names[34] = "Selenium" 
-dict_of_atomic_names[35] = "Bromine" 
-dict_of_atomic_names[36] = "Krypton" 
-dict_of_atomic_names[37] = "Rubidium" 
-dict_of_atomic_names[38] = "Strontium" 
-dict_of_atomic_names[39] = "Yttrium" 
-dict_of_atomic_names[40] = "Zirconium" 
-dict_of_atomic_names[41] = "Niobium" 
-dict_of_atomic_names[42] = "Molybdenum" 
-dict_of_atomic_names[43] = "Technetium" 
-dict_of_atomic_names[44] = "Ruthenium" 
-dict_of_atomic_names[45] = "Rhodium" 
-dict_of_atomic_names[46] = "Palladium" 
-dict_of_atomic_names[47] = "Silver" 
-dict_of_atomic_names[48] = "Cadmium" 
-dict_of_atomic_names[49] = "Indium" 
-dict_of_atomic_names[50] = "Tin" 
-dict_of_atomic_names[51] = "Antimony" 
-dict_of_atomic_names[52] = "Tellurium" 
-dict_of_atomic_names[53] = "Iodine" 
-dict_of_atomic_names[54] = "Xenon" 
-dict_of_atomic_names[55] = "Cesium" 
-dict_of_atomic_names[56] = "Barium" 
-dict_of_atomic_names[57] = "Lanthanum" 
-dict_of_atomic_names[58] = "Cerium" 
-dict_of_atomic_names[59] = "Praseodymium" 
-dict_of_atomic_names[60] = "Neodymium" 
-dict_of_atomic_names[61] = "Promethium" 
-dict_of_atomic_names[62] = "Samarium" 
-dict_of_atomic_names[63] = "Europium" 
-dict_of_atomic_names[64] = "Gadolinium" 
-dict_of_atomic_names[65] = "Terbium" 
-dict_of_atomic_names[66] = "Dysprosium" 
-dict_of_atomic_names[67] = "Holmium" 
-dict_of_atomic_names[68] = "Erbium" 
-dict_of_atomic_names[69] = "Thulium" 
-dict_of_atomic_names[70] = "Ytterbium" 
-dict_of_atomic_names[71] = "Lutetium" 
-dict_of_atomic_names[72] = "Hafnium" 
-dict_of_atomic_names[73] = "Tantalum" 
-dict_of_atomic_names[74] = "Tungsten" 
-dict_of_atomic_names[75] = "Rhenium" 
-dict_of_atomic_names[76] = "Osmium" 
-dict_of_atomic_names[77] = "Iridium" 
-dict_of_atomic_names[78] = "Platinum" 
-dict_of_atomic_names[79] = "Gold" 
-dict_of_atomic_names[80] = "Mercury" 
-dict_of_atomic_names[81] = "Thallium" 
-dict_of_atomic_names[82] = "Lead" 
-dict_of_atomic_names[83] = "Bismuth" 
-dict_of_atomic_names[84] = "Polonium" 
-dict_of_atomic_names[85] = "Astatine" 
-dict_of_atomic_names[86] = "Radon" 
-dict_of_atomic_names[87] = "Francium" 
-dict_of_atomic_names[88] = "Radium" 
-dict_of_atomic_names[89] = "Actinium" 
-dict_of_atomic_names[90] = "Thorium" 
-dict_of_atomic_names[91] = "Protactinium" 
-dict_of_atomic_names[92] = "Uranium" 
-dict_of_atomic_names[93] = "Neptunium" 
-dict_of_atomic_names[94] = "Plutonium" 
-dict_of_atomic_names[95] = "Americium" 
-dict_of_atomic_names[96] = "Curium" 
-dict_of_atomic_names[97] = "Berkelium" 
-dict_of_atomic_names[98] = "Californium" 
-dict_of_atomic_names[99] = "Einsteinium" 
-dict_of_atomic_names[100] = "Fermium" 
-dict_of_atomic_names[101] = "Mendelevium" 
-dict_of_atomic_names[102] = "Nobelium" 
-dict_of_atomic_names[103] = "Lawrencium" 
-dict_of_atomic_names[104] = "Rutherfordium" 
-dict_of_atomic_names[105] = "Dubnium" 
-dict_of_atomic_names[106] = "Seaborgium" 
-dict_of_atomic_names[107] = "Bohrium" 
-dict_of_atomic_names[108] = "Hassium" 
-dict_of_atomic_names[109] = "Meitnerium" 
-dict_of_atomic_names[110] = "Darmstadtium" 
-dict_of_atomic_names[111] = "Roentgenium" 
-dict_of_atomic_names[112] = "Ununbium" 
-dict_of_atomic_names[113] = "Ununtrium" 
-dict_of_atomic_names[114] = "Ununquadium" 
-dict_of_atomic_names[115] = "Ununpentium" 
-dict_of_atomic_names[116] = "Ununhexium" 
-dict_of_atomic_names[117] = "Ununseptium" 
-dict_of_atomic_names[118] = "Ununoctium" 
+dict_of_atomic_names[1] = "Hydrogen"
+dict_of_atomic_names[2] = "Helium"
+dict_of_atomic_names[3] = "Lithium"
+dict_of_atomic_names[4] = "Beryllium"
+dict_of_atomic_names[5] = "Boron"
+dict_of_atomic_names[6] = "Carbon"
+dict_of_atomic_names[7] = "Nitrogen"
+dict_of_atomic_names[8] = "Oxygen"
+dict_of_atomic_names[9] = "Fluorine"
+dict_of_atomic_names[10] = "Neon"
+dict_of_atomic_names[11] = "Sodium"
+dict_of_atomic_names[12] = "Magnesium"
+dict_of_atomic_names[13] = "Aluminum"
+dict_of_atomic_names[14] = "Silicon"
+dict_of_atomic_names[15] = "Phosphorus"
+dict_of_atomic_names[16] = "Sulfur"
+dict_of_atomic_names[17] = "Chlorine"
+dict_of_atomic_names[18] = "Argon"
+dict_of_atomic_names[19] = "Potassium"
+dict_of_atomic_names[20] = "Calcium"
+dict_of_atomic_names[21] = "Scandium"
+dict_of_atomic_names[22] = "Titanium"
+dict_of_atomic_names[23] = "Vanadium"
+dict_of_atomic_names[24] = "Chromium"
+dict_of_atomic_names[25] = "Manganese"
+dict_of_atomic_names[26] = "Iron"
+dict_of_atomic_names[27] = "Cobalt"
+dict_of_atomic_names[28] = "Nickel"
+dict_of_atomic_names[29] = "Copper"
+dict_of_atomic_names[30] = "Zinc"
+dict_of_atomic_names[31] = "Gallium"
+dict_of_atomic_names[32] = "Germanium"
+dict_of_atomic_names[33] = "Arsenic"
+dict_of_atomic_names[34] = "Selenium"
+dict_of_atomic_names[35] = "Bromine"
+dict_of_atomic_names[36] = "Krypton"
+dict_of_atomic_names[37] = "Rubidium"
+dict_of_atomic_names[38] = "Strontium"
+dict_of_atomic_names[39] = "Yttrium"
+dict_of_atomic_names[40] = "Zirconium"
+dict_of_atomic_names[41] = "Niobium"
+dict_of_atomic_names[42] = "Molybdenum"
+dict_of_atomic_names[43] = "Technetium"
+dict_of_atomic_names[44] = "Ruthenium"
+dict_of_atomic_names[45] = "Rhodium"
+dict_of_atomic_names[46] = "Palladium"
+dict_of_atomic_names[47] = "Silver"
+dict_of_atomic_names[48] = "Cadmium"
+dict_of_atomic_names[49] = "Indium"
+dict_of_atomic_names[50] = "Tin"
+dict_of_atomic_names[51] = "Antimony"
+dict_of_atomic_names[52] = "Tellurium"
+dict_of_atomic_names[53] = "Iodine"
+dict_of_atomic_names[54] = "Xenon"
+dict_of_atomic_names[55] = "Cesium"
+dict_of_atomic_names[56] = "Barium"
+dict_of_atomic_names[57] = "Lanthanum"
+dict_of_atomic_names[58] = "Cerium"
+dict_of_atomic_names[59] = "Praseodymium"
+dict_of_atomic_names[60] = "Neodymium"
+dict_of_atomic_names[61] = "Promethium"
+dict_of_atomic_names[62] = "Samarium"
+dict_of_atomic_names[63] = "Europium"
+dict_of_atomic_names[64] = "Gadolinium"
+dict_of_atomic_names[65] = "Terbium"
+dict_of_atomic_names[66] = "Dysprosium"
+dict_of_atomic_names[67] = "Holmium"
+dict_of_atomic_names[68] = "Erbium"
+dict_of_atomic_names[69] = "Thulium"
+dict_of_atomic_names[70] = "Ytterbium"
+dict_of_atomic_names[71] = "Lutetium"
+dict_of_atomic_names[72] = "Hafnium"
+dict_of_atomic_names[73] = "Tantalum"
+dict_of_atomic_names[74] = "Tungsten"
+dict_of_atomic_names[75] = "Rhenium"
+dict_of_atomic_names[76] = "Osmium"
+dict_of_atomic_names[77] = "Iridium"
+dict_of_atomic_names[78] = "Platinum"
+dict_of_atomic_names[79] = "Gold"
+dict_of_atomic_names[80] = "Mercury"
+dict_of_atomic_names[81] = "Thallium"
+dict_of_atomic_names[82] = "Lead"
+dict_of_atomic_names[83] = "Bismuth"
+dict_of_atomic_names[84] = "Polonium"
+dict_of_atomic_names[85] = "Astatine"
+dict_of_atomic_names[86] = "Radon"
+dict_of_atomic_names[87] = "Francium"
+dict_of_atomic_names[88] = "Radium"
+dict_of_atomic_names[89] = "Actinium"
+dict_of_atomic_names[90] = "Thorium"
+dict_of_atomic_names[91] = "Protactinium"
+dict_of_atomic_names[92] = "Uranium"
+dict_of_atomic_names[93] = "Neptunium"
+dict_of_atomic_names[94] = "Plutonium"
+dict_of_atomic_names[95] = "Americium"
+dict_of_atomic_names[96] = "Curium"
+dict_of_atomic_names[97] = "Berkelium"
+dict_of_atomic_names[98] = "Californium"
+dict_of_atomic_names[99] = "Einsteinium"
+dict_of_atomic_names[100] = "Fermium"
+dict_of_atomic_names[101] = "Mendelevium"
+dict_of_atomic_names[102] = "Nobelium"
+dict_of_atomic_names[103] = "Lawrencium"
+dict_of_atomic_names[104] = "Rutherfordium"
+dict_of_atomic_names[105] = "Dubnium"
+dict_of_atomic_names[106] = "Seaborgium"
+dict_of_atomic_names[107] = "Bohrium"
+dict_of_atomic_names[108] = "Hassium"
+dict_of_atomic_names[109] = "Meitnerium"
+dict_of_atomic_names[110] = "Darmstadtium"
+dict_of_atomic_names[111] = "Roentgenium"
+dict_of_atomic_names[112] = "Ununbium"
+dict_of_atomic_names[113] = "Ununtrium"
+dict_of_atomic_names[114] = "Ununquadium"
+dict_of_atomic_names[115] = "Ununpentium"
+dict_of_atomic_names[116] = "Ununhexium"
+dict_of_atomic_names[117] = "Ununseptium"
+dict_of_atomic_names[118] = "Ununoctium"
 
 dict_abbr_to_name={'Ru': 'Ruthenium', 'Re': 'Rhenium', 'Rf': 'Rutherfordium', 'Rg': 'Roentgenium', 'Ra': 'Radium', 'Rb': 'Rubidium', 'Rn': 'Radon', 'Rh': 'Rhodium', 'Be': 'Beryllium', 'Ba': 'Barium', 'Bh': 'Bohrium', 'Bi': 'Bismuth', 'Bk': 'Berkelium', 'Br': 'Bromine', 'Uuh': 'Ununhexium', 'H': 'Hydrogen', 'P': 'Phosphorus', 'Os': 'Osmium', 'Es': 'Einsteinium', 'Hg': 'Mercury', 'Ge': 'Germanium', 'Gd': 'Gadolinium', 'Ga': 'Gallium', 'Uub': 'Ununbium', 'Pr': 'Praseodymium', 'Pt': 'Platinum', 'Pu': 'Plutonium', 'C': 'Carbon', 'Pb': 'Lead', 'Pa': 'Protactinium', 'Pd': 'Palladium', 'Cd': 'Cadmium', 'Po': 'Polonium', 'Pm': 'Promethium', 'Hs': 'Hassium', 'Uuq': 'Ununquadium', 'Uup': 'Ununpentium', 'Uus': 'Ununseptium', 'Ho': 'Holmium', 'Hf': 'Hafnium', 'K': 'Potassium', 'He': 'Helium', 'Md': 'Mendelevium', 'Mg': 'Magnesium', 'Mo': 'Molybdenum', 'Mn': 'Manganese', 'O': 'Oxygen', 'Mt': 'Meitnerium', 'S': 'Sulfur', 'W': 'Tungsten', 'Zn': 'Zinc', 'Eu': 'Europium', 'Zr': 'Zirconium', 'Er': 'Erbium', 'Ni': 'Nickel', 'No': 'Nobelium', 'Na': 'Sodium', 'Nb': 'Niobium', 'Nd': 'Neodymium', 'Ne': 'Neon', 'Np': 'Neptunium', 'Fr': 'Francium', 'Fe': 'Iron', 'Fm': 'Fermium', 'B': 'Boron', 'F': 'Fluorine', 'Sr': 'Strontium', 'N': 'Nitrogen', 'Kr': 'Krypton', 'Si': 'Silicon', 'Sn': 'Tin', 'Sm': 'Samarium', 'V': 'Vanadium', 'Sc': 'Scandium', 'Sb': 'Antimony', 'Sg': 'Seaborgium', 'Se': 'Selenium', 'Co': 'Cobalt', 'Cm': 'Curium', 'Cl': 'Chlorine', 'Ca': 'Calcium', 'Cf': 'Californium', 'Ce': 'Cerium', 'Xe': 'Xenon', 'Lu': 'Lutetium', 'Cs': 'Cesium', 'Cr': 'Chromium', 'Cu': 'Copper', 'La': 'Lanthanum', 'Li': 'Lithium', 'Tl': 'Thallium', 'Tm': 'Thulium', 'Lr': 'Lawrencium', 'Th': 'Thorium', 'Ti': 'Titanium', 'Te': 'Tellurium', 'Tb': 'Terbium', 'Tc': 'Technetium', 'Ta': 'Tantalum', 'Yb': 'Ytterbium', 'Db': 'Dubnium', 'Dy': 'Dysprosium', 'Ds': 'Darmstadtium', 'I': 'Iodine', 'U': 'Uranium', 'Y': 'Yttrium', 'Ac': 'Actinium', 'Ag': 'Silver', 'Uut': 'Ununtrium', 'Ir': 'Iridium', 'Am': 'Americium', 'Al': 'Aluminum', 'As': 'Arsenic', 'Ar': 'Argon', 'Au': 'Gold', 'At': 'Astatine', 'In': 'Indium'}
